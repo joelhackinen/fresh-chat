@@ -8,7 +8,8 @@ import * as $_layout from "./routes/_layout.tsx";
 import * as $api_joke from "./routes/api/joke.ts";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
-import * as $MenuIsland from "./islands/MenuIsland.tsx";
+import * as $CreateDialog from "./islands/CreateDialog.tsx";
+import * as $JoinDialog from "./islands/JoinDialog.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -21,7 +22,8 @@ const manifest = {
     "./routes/index.tsx": $index,
   },
   islands: {
-    "./islands/MenuIsland.tsx": $MenuIsland,
+    "./islands/CreateDialog.tsx": $CreateDialog,
+    "./islands/JoinDialog.tsx": $JoinDialog,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

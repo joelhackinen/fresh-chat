@@ -1,11 +1,13 @@
-import Button from "../components/Button.tsx";
-import Dialog from "../components/Dialog.tsx";
-import MenuIsland from "../islands/MenuIsland.tsx";
+import JoinDialog from "../islands/JoinDialog.tsx";
+import CreateDialog from "../islands/CreateDialog.tsx";
 
 const Home = () => {
   return (
     <div class="flex flex-col gap-y-10">
-      <MenuIsland />
+      <div class="flex flex-nowrap justify-center items-center gap-10">
+        <JoinDialog />
+        <CreateDialog />
+      </div>
     </div>
   );
 };

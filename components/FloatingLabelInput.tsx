@@ -2,8 +2,6 @@ import { JSX } from "preact";
 import Input from "./Input.tsx";
 import { useId } from "preact/hooks";
 
-
-
 interface FloatingLabelInputProps extends JSX.HTMLAttributes<HTMLInputElement> {
   label: string;
 }
