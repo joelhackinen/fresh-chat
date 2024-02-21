@@ -10,8 +10,10 @@ interface DialogProps {
 }
 
 const Dialog = (props: DialogProps) => {
+  if (!props.show) return null;
+
   return (
-    <div class={`${props.show ? "fixed" : "hidden"} z-10`} aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
       <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
       <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
@@ -26,9 +28,13 @@ const Dialog = (props: DialogProps) => {
                   )
                 }
                 <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left w-full">
-                  <h3 class="mb-3 text-base font-semibold leading-6 text-gray-900" id="modal-title">
-                    {props.title}
-                  </h3>
+                  {
+                    props.title && (
+                      <h3 class="mb-3 text-base font-semibold leading-6 text-gray-900" id="modal-title">
+                        {props.title}
+                      </h3>
+                    )
+                  }
                   {props.body}
                 </div>
               </div>
