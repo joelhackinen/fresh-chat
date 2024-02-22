@@ -8,6 +8,7 @@ import * as $_layout from "./routes/_layout.tsx";
 import * as $api_joke from "./routes/api/joke.ts";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
+import * as $room_id_ from "./routes/room/[id].tsx";
 import * as $CreateDialog from "./islands/CreateDialog.tsx";
 import * as $JoinDialog from "./islands/JoinDialog.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -20,6 +21,7 @@ const manifest = {
     "./routes/api/joke.ts": $api_joke,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
+    "./routes/room/[id].tsx": $room_id_,
   },
   islands: {
     "./islands/CreateDialog.tsx": $CreateDialog,
