@@ -25,7 +25,7 @@ const Footer = (props: FooterProps) => {
   return (
     <div class={`${
         props.class ?? ""
-      } bg-white flex justify-center gap-8 xs:gap-16 px-4 xs:px-8 py-5 w-full text-sm`}
+      } bg-white hidden xs:flex justify-center gap-8 xs:gap-16 px-4 xs:px-8 py-5 w-full text-sm`}
     >
       {menus.map((item) => (
         <div class="mb-4" key={item.title}>
