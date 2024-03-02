@@ -1,4 +1,5 @@
 import BrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.6/tsx/brand-github.tsx";
+import { twMerge } from "tailwind-merge";
 
 interface FooterProps {
   class?: string;
@@ -23,9 +24,11 @@ const Footer = (props: FooterProps) => {
   ];
 
   return (
-    <div class={`${
-        props.class ?? ""
-      } bg-white hidden xs:flex justify-center gap-8 xs:gap-16 px-4 xs:px-8 py-5 w-full text-sm`}
+    <div class={
+      twMerge(
+        "flex bg-white justify-center gap-4 xs:gap-16 px-4 xs:px-8 py-2 xs:py-5 text-sm",
+        props.class
+      )}
     >
       {menus.map((item) => (
         <div class="mb-4" key={item.title}>
@@ -45,10 +48,9 @@ const Footer = (props: FooterProps) => {
         </div>
       ))}
 
-      <div class="text-gray-500 space-y-2">
+      <div class="text-gray-500 space-y-2 self-center">
         <div class="text-xs">
           Copyright © 2024 Joel Häkkinen<br />
-          All right reserved.
         </div>
 
         <a

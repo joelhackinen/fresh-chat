@@ -9,8 +9,10 @@ import * as $api_joke from "./routes/api/joke.ts";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $room_id_ from "./routes/room/[id].tsx";
+import * as $ChatBox from "./islands/ChatBox.tsx";
 import * as $CreateDialog from "./islands/CreateDialog.tsx";
 import * as $JoinDialog from "./islands/JoinDialog.tsx";
+import * as $MemberBox from "./islands/MemberBox.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -24,8 +26,10 @@ const manifest = {
     "./routes/room/[id].tsx": $room_id_,
   },
   islands: {
+    "./islands/ChatBox.tsx": $ChatBox,
     "./islands/CreateDialog.tsx": $CreateDialog,
     "./islands/JoinDialog.tsx": $JoinDialog,
+    "./islands/MemberBox.tsx": $MemberBox,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

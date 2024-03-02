@@ -12,7 +12,9 @@ const Home = () => {
           height="128"
           alt="the Fresh logo: a sliced lemon dripping with juice"
         />
-        <h1 class="text-4xl font-bold text-center">Deno chat, made with Fresh</h1>
+        <h1 class="text-4xl font-bold text-center">
+          Deno chat, made with Fresh
+        </h1>
       </div>
       <div class="flex flex-nowrap justify-center gap-10">
         <JoinDialog />
