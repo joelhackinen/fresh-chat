@@ -6,31 +6,31 @@ import IconDoorEnter from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/door-e
 
 
 const JoinDialog = () => {
-  const joinDialogSignal = useSignal(false);
+  const showDialog = useSignal(false);
 
   return (
     <>
       <Button
         class="w-20 bg-white hover:bg-gray-100"
-        onClick={() => joinDialogSignal.value = true}
+        onClick={() => showDialog.value = true}
       >
         Join
       </Button>
       <Dialog
-        show={joinDialogSignal.value}
+        show={showDialog.value}
         icon={<IconDoorEnter />}
         title="Join a room"
         body={
-          <div class="flex flex-col gap-4 w-full">
-            <FloatingLabelInput>Room name</FloatingLabelInput>
-            <FloatingLabelInput>Password</FloatingLabelInput>
+          <div class="flex flex-col gap-4">
+            <FloatingLabelInput class="w-full">Room name</FloatingLabelInput>
+            <FloatingLabelInput class="w-full">Password</FloatingLabelInput>
           </div>
         }
         footer={
           <div class="bg-gray-50 px-4 py-3 flex flex-col sm:flex-row sm:justify-end sm:px-6 gap-4">
             <Button
               class="bg-[#ee5454] hover:bg-[#f18b8b] text-sm text-white"
-              onClick={() => joinDialogSignal.value = false}
+              onClick={() => showDialog.value = false}
             >
               Cancel
             </Button>

@@ -3,7 +3,7 @@ import CreateDialog from "../islands/CreateDialog.tsx";
 
 const Home = () => {
   return (
-    <div class="flex flex-col gap-y-10 mx-auto max-w-screen-md">
+    <div class="flex flex-col gap-y-10 mx-auto">
       <div class="flex flex-col items-center justify-center">
         <img
           class="my-6"
